@@ -30,14 +30,14 @@ const BackToTop = () => {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed bottom-10 right-4 z-40"
+          className="fixed z-40 bottom-10 right-4"
           initial={{ opacity: 0, right: -10 }}
           animate={{ opacity: 1, right: 16 }}
           exit={{ opacity: 0, right: -10 }}
         >
           <button
             onClick={scrollToTop}
-            className="shadow-lg shadow-purple-950 p-2 bg-gradient-to-r from-purple-950 to-black rounded-xl"
+            className="p-3 shadow-lg sm:p-4 shadow-purple-950 bg-gradient-to-r from-purple-950 to-black rounded-xl"
           >
             <ArrowUpWideNarrow size={20} />
           </button>

@@ -48,7 +48,7 @@ const Home = ({ homeInfo }: HomeSectionProps) => {
           <div className="flex flex-col items-center justify-between w-full space-y-4 md:flex-row">
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1kPJwsO4D2g40OusKT3xIhcPvas8_1sC6/view"
+              href="https://drive.google.com/file/d/1jn6XltseYnlQdDrd09OIE8Hm5YwQVOrm/view?usp=sharing"
             >
               <Button className="cursor-pointer transition-all flex justify-between bg-zinc-500/10 px-2 py-2 rounded-full hover:text-white tracking-wider shadow-xl hover:bg-purple-950 hover:scale-105 duration-500 hover:ring-1 ring-zinc-100 font-mono w-[150px]">
                 <p>DOWNLOAD CV</p>

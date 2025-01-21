@@ -10,7 +10,7 @@ type ProjectSectionsProps = {
 
 export const ProjectSection = ({ sections }: ProjectSectionsProps) => {
   return (
-    <section className="containers my-12 md:my32 flex flex-col gap-8 md:gap-32 text-zinc-500">
+    <section className="flex flex-col gap-8 my-12 containers md:my32 md:gap-32 text-zinc-500">
       {sections.map((section) => (
         <motion.div
           key={section.title}
@@ -18,12 +18,14 @@ export const ProjectSection = ({ sections }: ProjectSectionsProps) => {
           {...fadeUpAnimation}
           transition={{ duration: 0.5 }}
         >
-          <h2>{section.title}</h2>
+          <h2 className="text-xl font-semibold md:text-2xl text-purple-950">
+            {section.title}
+          </h2>
           <Image
             src={section.image.url}
             width={1080}
             height={672}
-            className="w-full aspect-auto rounded-xl object-cover text-purple-950"
+            className="object-cover w-full aspect-auto rounded-xl text-purple-950"
             alt={`Imagem da sessão ${section.title}`}
             unoptimized
           />

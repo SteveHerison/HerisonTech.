@@ -8,6 +8,8 @@ import { ArrowBigLeftDash } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeUpAnimation } from "../../../lib/animations";
+import { FiGithub } from "react-icons/fi";
+import { FaGlobeAmericas } from "react-icons/fa";
 
 type ProjectDetailsProps = {
   projectData: Project;
@@ -54,15 +56,16 @@ const ProjectDetails = ({ projectData }: ProjectDetailsProps) => {
       >
         {projectData?.githubUrl && (
           <a href={projectData.githubUrl} target="_blank">
-            <Button className="transition-all shadow-lg bg-purple-950 shadow-purple-500 hover:shadow-zinc-800 text-zinc-300">
-              repositorio
+            <Button className="transition-all shadow-lg bg-purple-950 hover:shadow-zinc-800 text-zinc-300 hover:bg-purple-900">
+              <FiGithub /> Repositório
             </Button>
           </a>
         )}
         {projectData?.liveProjectUrl && (
           <a target="_blank" href={projectData.liveProjectUrl}>
-            <Button className="transition-all shadow-lg bg-purple-950 shadow-purple-500 hover:shadow-zinc-800 text-zinc-300">
-              Project Online
+            <Button className="transition-all shadow-lg bg-purple-950 hover:shadow-zinc-800 text-zinc-300 hover:bg-purple-900 ">
+              <FaGlobeAmericas />
+              Projeto Online
             </Button>
           </a>
         )}

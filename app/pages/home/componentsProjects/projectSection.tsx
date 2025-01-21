@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-// import finance from "@/app/finance.svg";
+import finance from "../../../../public/images/icons/finance.svg";
 import { Link } from "../../../components/Link";
 import { ArrowBigRightDash } from "lucide-react";
 
@@ -16,7 +16,7 @@ type ProjectsCardsProps = {
 export const ProjectsCards = ({ project }: ProjectsCardsProps) => {
   return (
     <motion.div
-      className="py-16 containers text-zinc-500 flex gap-6 lg:gap-12 flex-col lg:flex-row"
+      className="flex flex-col gap-6 py-6 containers text-zinc-500 lg:gap-12 lg:flex-row"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 100 }}
@@ -34,22 +34,22 @@ export const ProjectsCards = ({ project }: ProjectsCardsProps) => {
           height={304}
           src={project.thumbnail.url}
           alt={`Thumbnail do projeto ${project.title}`}
-          className="rounded-xl object-cover w-full h-full"
+          className="object-cover w-full h-full rounded-xl"
         />
       </motion.div>
 
-      <div className="flex  gap-3 text-xl flex-col items-start flex-1 lg:py-4">
+      <div className="flex flex-col items-start flex-1 gap-3 text-xl lg:py-4">
         <motion.h3
-          className="flex flex-col items-center text-base md:text-xl"
+          className="flex items-center gap-2 text-base md:text-xl"
           {...fadeUpAnimation}
           transition={{ duration: 0.7 }}
         >
-          {/* <Image src={finance} alt="Logo" width={20} height={20} fill />{" "} */}
+          <Image src={finance} alt="Logo" width={20} height={20} />
           {project.title}
         </motion.h3>
 
         <motion.p
-          className="text-sm"
+          className="text-sm md:text-base"
           {...fadeUpAnimation}
           transition={{ duration: 0.2, delay: 0.3 }}
         >
@@ -70,7 +70,7 @@ export const ProjectsCards = ({ project }: ProjectsCardsProps) => {
         </div>
         <Link
           href={`/projects/${project.slug}`}
-          className="text-base flex  hover:text-purple-950 transition-colors"
+          className="flex text-base transition-colors hover:text-purple-950"
         >
           Ver Projeto
           <ArrowBigRightDash />

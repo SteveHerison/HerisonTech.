@@ -14,7 +14,7 @@ export const ProjectsComponent = ({ projects }: highlightProjectsProps) => {
   return (
     <div className="py-16 containers text-zinc-500">
       <TitleSection subtitle="destaques" title="Projetos" />
-      <Horizontal className="mb-16" />
+      <Horizontal className="" />
 
       <div className="">
         {projects?.map((projects) => (
@@ -28,7 +28,7 @@ export const ProjectsComponent = ({ projects }: highlightProjectsProps) => {
           <span>Se interessou?</span>
           <Link
             href="/projects"
-            className="inline-flex hover:text-purple-950 transition-colors"
+            className="inline-flex transition-colors hover:text-purple-950"
           >
             Ver todos
             <ArrowBigRightDash />

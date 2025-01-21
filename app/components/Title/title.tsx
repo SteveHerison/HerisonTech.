@@ -12,14 +12,14 @@ export const TitleSection = ({ title, subtitle, className }: TitleProps) => {
   return (
     <div className={cn("flex flex-col gap-3", className)}>
       <motion.span
-        className="font-semibold text-purple-950 text-sm"
+        className="text-sm font-semibold text-purple-950"
         {...fadeUpAnimation}
         transition={{ duration: 0.5 }}
       >
         {`../${subtitle}`}
       </motion.span>
       <motion.h3
-        className="text-xl"
+        className="text-xl md:text-2xl "
         {...fadeUpAnimation}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
